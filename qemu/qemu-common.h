@@ -11,6 +11,8 @@
 #define QEMU_WARN_UNUSED_RESULT
 #endif
 
+#define BIT(n) (1 << (n))
+
 #define QEMU_BUILD_BUG_ON(x) typedef char __build_bug_on__##__LINE__[(x)?-1:1];
 
 typedef struct QEMUTimer QEMUTimer;
