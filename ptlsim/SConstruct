@@ -28,10 +28,10 @@ env['CPPPATH'].append("%s/%s" % (qemu_dir, "fpu"))
 env['CPPPATH'].append("%s/%s" % (qemu_dir, "x86_64-softmmu"))
 
 #dramsim 
-dramsim_path= ARGUMENTS.get('dramsim', '%s/HybridSim2' % (os.environ['HOME'] ))
+hybridsim_path= ARGUMENTS.get('hybridsim', '%s/HybridSim' % (os.environ['HOME'] ))
 #this is probably not enough, should probably check to make sure there's an actual library there
-if os.path.isdir(dramsim_path):
-	env['CPPPATH'].append(dramsim_path);
+if os.path.isdir(hybridsim_path):
+	env['CPPPATH'].append(hybridsim_path);
 	env.Append(CCFLAGS = '-DDRAMSIM')
 
 
