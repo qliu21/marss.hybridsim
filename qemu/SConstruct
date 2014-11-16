@@ -38,7 +38,7 @@ else:
     env.Append(CCFLAGS = '-g3')
     env.Append(CCFLAGS = '-O3 -march=native -mtune=native')
 
-dramsim_path= ARGUMENTS.get('dramsim', '%s/DRAMSim2' % (os.environ['HOME'] ))
+dramsim_path= ARGUMENTS.get('dramsim', '%s/HybridSim' % (os.environ['HOME'] ))
 if os.path.isdir(dramsim_path):
 	env.Append(LINKFLAGS=('-Wl,-rpath=%s' %(dramsim_path)))
 	env.Append(LIBS=('hybridsim'))
